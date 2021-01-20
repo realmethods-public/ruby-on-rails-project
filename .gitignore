@@ -28,4 +28,4 @@
 
 # Ignore ruby on rails system files
 /bin/*
-/db/*
+
