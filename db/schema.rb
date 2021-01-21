@@ -15,12 +15,20 @@ ActiveRecord::Schema.define(version: 2021_01_20_041702) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "dogs", force: :cascade do |t|
+  create_table "dogs", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "motto"
-    t.string "size"
+    t.string "type"
+    t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_dogs_on_owner_id"
+  end
+
+  create_table "owners", id: :serial, force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.datetime "published_at"
   end
 
 end

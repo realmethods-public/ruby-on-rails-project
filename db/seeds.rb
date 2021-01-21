@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Dog.create(name: 'Nala', motto: 'Born to be wild')
-Dog.create(name: 'Alex', motto: 'Calm as can be')
-Dog.create(name: 'Leroy', motto: 'Life of the pawty')
-Dog.create(name: 'Belle', motto: 'Miss Independent')
+Dog.create(name: 'Nala', motto: 'Born to be wild', size: 'small')
+Dog.create(name: 'Alex', motto: 'Calm as can be', size: 'small')
+Dog.create(name: 'Leroy', motto: 'Life of the pawty', size: 'medium')
+Dog.create(name: 'Belle', motto: 'Miss Independent', size: 'large')
+
+Owner.create(first_name: 'Dennis', last_name: 'Andrews')
